@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  # NestJS Application Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: always
+    volumes:
+      - .:/app # Mount the current directory to /app in the container
+      - /app/node_modules # Ensure node_modules are not overwritten by the host
+    command: npm run start
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: ${PORT}
+      MONGO_URI: ${MONGO_URI}
+    depends_on:
+      - mongo
+    networks:
+      - nestjs-mongo-network
+    env_file:
+      - .env
+
+  # MongoDB Service
+  mongo:
+    image: mongo:5
+    container_name: mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - nestjs-mongo-network
+
+# Define volumes to persist MongoDB data
+volumes:
+  mongodb_data:
+
+networks:
+  nestjs-mongo-network:
+    driver: bridge
