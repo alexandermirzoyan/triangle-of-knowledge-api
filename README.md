@@ -8,7 +8,7 @@ Stay tuned for something awesome! We're working hard to bring this project to li
 
 Feel free to:
 - 🌟 Star this repository to be notified when we launch.
-- ☕ Dring some coffee.
+- ☕ Drink some coffee.
 
 ---
 
