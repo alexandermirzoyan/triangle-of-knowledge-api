@@ -1,73 +1,63 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# 🚀 Triangle of Knowledge - API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+The Triangle of Knowledge - API is a backend application built with NestJS and TypeScript, using MongoDB as the database. It is containerized with Docker for seamless deployment and scalability.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Features
+- 🐈 NestJS Framework: Modular and structured backend using TypeScript.
+- 🍃 MongoDB: NoSQL database to manage knowledge data.
+- 🐳 Docker: Containerized for easy setup and environment management.
 
-## Description
+## Prerequisites
+Before running the application, ensure you have the following installed on your system:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- 🐳 [Docker](https://www.docker.com/) – Containerization platform for building, sharing, and running applications
+- 🐙 [Git](https://git-scm.com/downloads) – Git is a distributed version control system that tracks versions of files.
 
-## Installation
+## Getting Started
+Follow these steps to set up and run the application locally.
 
-```bash
-$ npm install
+1. 📁***Clone the repository***
+   ```bash
+   $ git clone https://github.com/your-username/triangle-of-knowledge-api.git
+   $ cd triangle-of-knowledge-api
+   ```
+2. 🛠️***Build and run the application using Docker***
+   ```bash
+   $ docker-compose up --build
+   ```
+   This command will build the Docker containers and start the application.
+3. 📡***Access the API***
+   ```bash
+   http://localhost:5000
+   ```
+   Make sure to check the API documentation or specific routes in the project code.
+
+## Project Structure
+The project follows the default NestJS structure:
+
+```
+   src/
+   │
+   ├── auth/             # Module responsible for authentication and authorization logic
+   ├── common/           # Shared utilities
+   ├── knowledge-list/   # Handles the logic related to managing and retrieving knowledge lists
+   ├── mail/             # Handles email-related functionalities such as sending notifications or confirmations
+   ├── users/            # Manages user-related operations such as user data, profiles, and account management
+   └── app.module.ts     # Root module that brings together all the application's modules
+   └── app.controller.ts # Root controller managing core routes and API endpoints
+   └── app.service.ts    # Root service containing the core business logic for the application
 ```
 
-## Running the app
+### Environment Variables
+Ensure you set up the environment variables (copy from `.env.example`, create `.env` file and add them):
 
+### Project API docs
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+http://localhost:5000/api-docs
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
+Made with ❤️ by [Miqayel Srapionyan](https://github.com/miqo-srapionyan)
