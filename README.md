@@ -60,4 +60,4 @@ http://localhost:5000/api-docs
 
 This project is licensed under the [MIT License](LICENSE).
 
-Made with ❤️ by [Miqayel Srapionyan](https://github.com/miqo-srapionyan)
+Made with ❤️ by [Mikayel Srapionyan](https://github.com/miqo-srapionyan)
